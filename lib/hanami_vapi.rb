@@ -1,0 +1,2 @@
+module HanamiVapi
+end

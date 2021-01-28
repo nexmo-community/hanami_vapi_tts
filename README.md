@@ -1,33 +1,34 @@
-# Hanami Vapi
+# Vonage Voice API TTS on Hanami
 
-Welcome to your new Hanami project!
+Create text-to-speech phone calls with the Vonage Voice API and the Vonage Ruby SDK on Hanami.
 
-## Setup
+## Prerequisites
 
-How to run tests:
+This project requires the following:
 
-```
-% bundle exec rake
-```
+* Ruby
+* Hanami
+* A Vonage Account
+* A Vonage Phone Number
 
-How to run the development console:
+## Installation
 
-```
-% bundle exec hanami console
-```
+To install the application:
 
-How to run the development server:
+* Clone this repository locally
+* Run `bundle install` to install the dependencies
+* Run `bundle exec hanami db prepare` to set up the database
+* Run `bundle exec rake db:seed` to seed the database with language options
 
-```
-% bundle exec hanami server
-```
+## Usage
 
-How to prepare (create and migrate) DB for `development` and `test` environments:
+To run the telephone game do the following:
 
-```
-% bundle exec hanami db prepare
+* Rename `.env.sample` to `.env` and insert your Vonage API credentials, along with your Vonage phone number
+* Download your `private.key` for your Vonage Voice application from the [Vonage API Dashboard](https://dashboard.nexmo.com)
+* Start your Hanami server by running `bundle exec hanami server` from the command line
+* Visit your website at `http://localhost:200` and fill out the form to create your first tex-to-speech phone call
 
-% HANAMI_ENV=test bundle exec hanami db prepare
-```
+## License
 
-Explore Hanami [guides](https://guides.hanamirb.org/), [API docs](http://docs.hanamirb.org/1.3.3/), or jump in [chat](http://chat.hanamirb.org) for help. Enjoy! 🌸
+This project is under the [MIT License](LICENSE).
